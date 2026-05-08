@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        details {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn.seleccionado {
+            background-color: #28a745;
+        }
+        .ticker {
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 10px;
+            margin-top: 30px;
+        }
+        .ticker-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 15s linear infinite;
+        }
+        @keyframes ticker {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Noticias</h1>
+    </header>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Volver al Inicio</a>
+        </div>
+    </nav>
+    <section class="container mt-5">
+        <h2 class="text-center mb-4">Noticias</h2>
+        <details open>
+            <summary>Software de Sistema</summary>
+            <p>Se lanzó una nueva actualización de Windows que mejora la seguridad y el rendimiento.</p>
+            <a href="https://www.infobae.com/tecno/2026/04/19/windows-11-tendra-una-gran-actualizacion-tu-pc-mejorara-el-rendimiento-con-estas-mejoras/"
+                class="btn" onclick="cambiarColor(this)">Leer más</a>
+        </details>
+        <details>
+            <summary>💻 Software de Aplicación</summary>
+            <p>Una nueva versión de Google Docs incluye funciones de inteligencia artificial para redactar textos.</p>
+            <a href="https://es.wired.com/articulos/probe-las-nuevas-herramientas-de-ia-de-google-docs-esto-es-lo-que-funciono-y-lo-que-no"
+                class="btn" onclick="cambiarColor(this)">Leer más</a>
+        </details>
+        <details>
+            <summary> Software Libre</summary>
+            <p>La comunidad de Linux presentó un kernel optimizado para servidores de alto rendimiento.</p>
+            <a href="https://www.geeknetic.es/Noticia/38265/El-kernel-Linux-70-llega-con-mejoras-de-rendimiento-soporte-para-nuevo-hardware-y-un-sistema-de-archivos-XFS-mas-inteligente.html"
+                class="btn" onclick="cambiarColor(this)">Leer más</a>
+        </details>
+    </section>
+    <div class="ticker">
+        <div class="ticker-content">
+            <span> Última noticia: Nuevo software educativo...</span>
+            <span> | Actualización importante en software libre...</span>
+            <span> | Software propietario lanza nueva versión...</span>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>© 2026 Revista Digital de Tecnología</p>
+    </footer>
+    <script>
+        function cambiarColor(boton) {
+            document.querySelectorAll('.btn').forEach(b => b.classList.remove('seleccionado'));
+            boton.classList.add('seleccionado');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

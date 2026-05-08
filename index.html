@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revista Digital de Tecnología</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1>Revista Digital de Tecnología</h1>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">RevistaTech</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="D:\Examen programacion web\Proyecto-Examen\clasificacion.html">Clasificación</a></li>
+        <li class="nav-item"><a class="nav-link" href="D:\Examen programacion web\Proyecto-Examen\contactos.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="D:\Examen programacion web\Proyecto-Examen\ultimanoticia.html">Noticia</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section id="inicio" class="mt-4">
+  <div id="carouselNoticias" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="D:\Examen programacion web\Proyecto-Examen\educativo.jpg" class="d-block w-100" alt="Software de sistema">
+        <div class="carousel-caption">
+          <h5>Nuevo Software de Sistema</h5>
+          <p>Optimización y rendimiento mejorado.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="D:\Examen programacion web\Proyecto-Examen\nuevo software.webp" class="d-block w-100" alt="Software educativo">
+        <div class="carousel-caption">
+          <h5>Software Educativo</h5>
+          <p>Innovación en el aprendizaje digital.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="D:\Examen programacion web\Proyecto-Examen\imagen 3.jpg" class="d-block w-100" alt="Software libre">
+        <div class="carousel-caption">
+          <h5>Actualización en Software Libre</h5>
+          <p>Mayor seguridad y flexibilidad.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+<div class="container mt-4">
+  <button class="btn btn-success" onclick="mostrarAlerta()">Publicar noticia</button>
+  <div id="alertaExito" class="alert alert-success mt-3" style="display:none;">
+    ✔ Nueva noticia publicada correctamente
+  </div>
+  <div id="alertaAviso" class="alert alert-warning mt-3" style="display:none;">
+    ⚠ Revisa la información antes de publicar
+  </div>
+  <div id="alertaInfo" class="alert alert-info mt-3" style="display:none;">
+    ℹ La noticia será visible en la sección de Noticias
+  </div>
+</div>
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  <p>© 2026 Revista Digital de Tecnología</p>
+</footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
